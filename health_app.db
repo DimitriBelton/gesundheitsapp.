@@ -1,0 +1,32 @@
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    age INTEGER NOT NULL,
+    gender TEXT NOT NULL,
+    nutrition_plan TEXT,
+    CONSTRAINT gender_check CHECK (gender IN ('male', 'female'))
+);
+
+CREATE TABLE medication_reminders (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    medication TEXT NOT NULL,
+    time TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE health_goals (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    goal TEXT NOT NULL,
+    value TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE activity_logs (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    activity TEXT NOT NULL,
+    duration INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

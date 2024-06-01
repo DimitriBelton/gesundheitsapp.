@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesundheits-App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Willkommen bei Ihrer Gesundheits-App!</h1>
+        <form id="addUserForm">
+            <h2>Benutzer hinzufügen</h2>
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="age">Alter:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="gender">Geschlecht:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Männlich</option>
+                <option value="female">Weiblich</option>
+            </select>
+            <button type="submit">Benutzer hinzufügen</button>
+        </form>
+        <form id="deleteUserForm">
+            <h2>Benutzer löschen</h2>
+            <label for="deleteUsername">Benutzername:</label>
+            <input type="text" id="deleteUsername" name="deleteUsername" required>
+            <button type="submit">Benutzer löschen</button>
+        </form>
+        <form id="userInfoForm">
+            <h2>Benutzerinformationen abrufen</h2>
+            <label for="infoUsername">Benutzername:</label>
+            <input type="text" id="infoUsername" name="infoUsername" required>
+            <button type="submit">Informationen abrufen</button>
+        </form>
+        <form id="addMedicationReminderForm">
+            <h2>Medikationserinnerung hinzufügen</h2>
+            <label for="reminderUsername">Benutzername:</label>
+            <input type="text" id="reminderUsername" name="reminderUsername" required>
+            <label for="medication">Medikament:</label>
+            <input type="text" id="medication" name="medication" required>
+            <label for="time">Zeit:</label>
+            <input type="text" id="time" name="time" required>
+            <button type="submit">Erinnerung hinzufügen</button>
+        </form>
+        <form id="deleteMedicationReminderForm">
+            <h2>Medikationserinnerung löschen</h2>
+            <label for="deleteReminderUsername">Benutzername:</label>
+            <input type="text" id="deleteReminderUsername" name="deleteReminderUsername" required>
+            <label for="reminderIndex">Erinnerungsindex:</label>
+            <input type="number" id="reminderIndex" name="reminderIndex" required>
+            <button type="submit">Erinnerung löschen</button>
+        </form>
+        <form id="createNutritionPlanForm">
+            <h2>Ernährungsplan erstellen</h2>
+            <label for="nutritionUsername">Benutzername:</label>
+            <input type="text" id="nutritionUsername" name="nutritionUsername" required>
+            <label for="nutritionAge">Alter:</label>
+            <input type="number" id="nutritionAge" name="nutritionAge" required>
+            <label for="nutritionGender">Geschlecht:</label>
+            <select id="nutritionGender" name="nutritionGender" required>
+                <option value="male">Männlich</option>
+                <option value="female">Weiblich</option>
+            </select>
+            <label for="activityLevel">Aktivitätslevel:</label>
+            <select id="activityLevel" name="activityLevel" required>
+                <option value="sedentary">Sitzend</option>
+                <option value="moderate">Mäßig</option>
+                <option value="active">Aktiv</option>
+            </select>
+            <button type="submit">Ernährungsplan erstellen</button>
+        </form>
+        <form id="setHealthGoalForm">
+            <h2>Gesundheitsziel festlegen</h2>
+            <label for="goalUsername">Benutzername:</label>
+            <input type="text" id="goalUsername" name="goalUsername" required>
+            <label for="goal">Ziel:</label>
+            <input type="text" id="goal" name="goal" required>
+            <label for="goalValue">Wert:</label>
+            <input type="text" id="goalValue" name="goalValue" required>
+            <button type="submit">Ziel festlegen</button>
+        </form>
+        <form id="logActivityForm">
+            <h2>Aktivität protokollieren</h2>
+            <label for="activityUsername">Benutzername:</label>
+            <input type="text" id="activityUsername" name="activityUsername" required>
+            <label for="activity">Aktivität:</label>
+            <input type="text" id="activity" name="activity" required>
+            <label for="duration">Dauer (in Minuten):</label>
+            <input type="number" id="duration" name="duration" required>
+            <button type="submit">Aktivität protokollieren</button>
+        </form>
+        <form id="deleteActivityLogForm">
+            <h2>Aktivitätseintrag löschen</h2>
+            <label for="deleteActivityUsername">Benutzername:</label>
+            <input type="text" id="deleteActivityUsername" name="deleteActivityUsername" required>
+            <label for="activityLogIndex">Eintragsindex:</label>
+            <input type="number" id="activityLogIndex" name="activityLogIndex" required>
+            <button type="submit">Eintrag löschen</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
